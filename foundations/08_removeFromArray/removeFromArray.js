@@ -1,3 +1,4 @@
+/* The C method
 const removeFromArray = function(arr, ...args) {
     let result = [];
 
@@ -16,6 +17,18 @@ const removeFromArray = function(arr, ...args) {
     }
     return result;
 };
+*/
+
+const removeFromArray = function(arr, ...args){
+    let result = [];
+
+    arr.forEach((element) => {
+        if (!args.includes(element)){
+            result.push(element);
+        }
+    });
+    return result;
+}
 
 /*
 console.log("Test 1: ", removeFromArray([1,2,3,4], 2));
