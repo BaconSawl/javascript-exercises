@@ -1,15 +1,18 @@
-const palindromes = function (string) {
-    const reversedString = string.split(",").reverse().join("");
-    return (string === reversedString);
+const palindromes = function (s) {
+    const newString = s.replace(/[^0-9a-z-A-Z]/g, "").toLowerCase();
+    const reversedString = newString.split("").reverse().join("");
+    return (newString == reversedString);
 };
 
 /*
 function pld(s) {
-    const reversedString = s.split(",").reverse().join("");
-    return (s == reversedString);
+    newString = s.replace(/[^0-9a-z-A-Z ]/g, "").replaceAll(" ", "").toLowerCase();
+    const reversedString = newString.split("").reverse().join("");
+    console.log(reversedString);
+    return (s === reversedString);
 }
 
-pld("racecar!");
+pld("Racecar");
 */
 // Do not edit below this line
 module.exports = palindromes;
